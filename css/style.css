@@ -1,0 +1,63 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    color: #8a8a99;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    touch-action: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+canvas {
+    display: block;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    background: #000;
+    margin-top: 4px;
+}
+
+.help {
+    margin: 8px 12px;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.touch {
+    display: none;
+    width: 100%;
+    max-width: 520px;
+    justify-content: space-between;
+    padding: 6px 12px;
+    box-sizing: border-box;
+}
+
+.pad { display: flex; gap: 10px; }
+
+.touch button {
+    width: 74px;
+    height: 74px;
+    font-size: 1.6rem;
+    line-height: 1;
+    color: #d7d7d7;
+    background: #1c1c28;
+    border: 2px solid #d7d7d7;
+    border-radius: 14px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: none;
+}
+
+.touch button small { display: block; font-size: 0.6rem; margin-top: 2px; }
+.touch button:active { background: #3a3a55; }
+
+@media (pointer: coarse) {
+    .touch { display: flex; }
+    .help { display: none; }
+}
